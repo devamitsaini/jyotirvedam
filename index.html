@@ -271,7 +271,7 @@
         rgba(255,255,255,0.70),
         rgba(255,255,255,0.70)
       ),
-      url('images/pandit-ji.jpeg');
+      url('');
 
     background-size: cover;
     background-position: center;
@@ -284,7 +284,19 @@
     overflow:hidden;
     box-shadow:var(--shadow-card);
   }
+  .about-card-image{
+    background:
+      linear-gradient(
+        rgba(255,255,255,0.70),
+        rgba(255,255,255,0.70)
+      ),
+      url('images/pandit-ji.jpeg');
 
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+  
   .about-card::after{
     content:'ॐ';position:absolute;bottom:-15px;right:20px;
     font-size:6.5rem;color:rgba(232,80,10,0.03);
@@ -666,7 +678,7 @@
     <div class="container">
       <div class="divider"><span>✦</span></div>
       <div class="about-grid">
-        <article class="about-card reveal">
+        <article class="about-card about-card-image reveal">
           <div class="tag-pill hi-text">✦ पवित्र परम्परा</div>
           <h2 class="about-name">पंडित समर्थ शर्मा<br><span style="font-size:.6em;color:var(--brown-muted);font-family:var(--font-display);letter-spacing:1px">Pandit Samarth Sharma</span></h2>
 
@@ -1143,6 +1155,29 @@ onclick="openPujaModal(
       </div>
     </div>
   </section>
+
+  <section id="about-jyotirvedam-seo" class="section-pad">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <div class="tag-pill hi-text">About Jyotirvedam</div>
+      <h2 class="section-title">Trusted Vedic Puja & Astrology Services in Ujjain</h2>
+    </div>
+
+    <div class="about-card reveal">
+
+      <p class="about-body=">
+        Jyotirvedam is a trusted platform for authentic Vedic Puja, Dosh Nivaran, and Astrology Services in Ujjain. Led by Pandit Samarth Sharma, we specialize in Mangal Dosh Nivaran, Kaal Sarp Dosh Shanti, Pitra Dosh Nivaran, Rudrabhishek, Mahamrityunjaya Jaap, Navgraha Shanti, Grah Vastu Shanti, and Vedic Astrology Consultation.
+      </p>
+
+      <p class="about-body">
+        All rituals are performed according to traditional Vedic procedures at sacred places including Mangalnath Temple, Mahakaleshwar Temple, Siddhavat, and other holy sites of Ujjain. We also provide online puja services, Kundli analysis, Kundli Milan, and spiritual guidance for devotees across India and worldwide.
+      </p>
+
+    </div>
+
+  </div>
+</section>
 
   <!-- ═══ CONTACT ═══ -->
   <section id="contact" class="section-pad">
