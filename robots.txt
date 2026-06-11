@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jyotirvedam.in/sitemap.xml
+Sitemap: https://www.jyotirvedam.in/sitemap.xml
