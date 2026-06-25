@@ -1,8 +1,13 @@
   <!DOCTYPE html>
   <html lang="hi">
     <!-- Favicon Code -->
+     
 <link rel="icon" type="image/png" sizes="32x32" href="images/fav.png">
   <head>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jyotirvedam - Pandit Samarth Sharma | Mangal Dosh Nivaran, Kaal Sarp Dosh Puja & Astrology Services in Ujjain</title>
@@ -263,98 +268,362 @@
   .scroll-txt{font-family:var(--font-caps);font-size:.6rem;letter-spacing:2px;color:var(--bhagwa)}
 
   /* ═══ ABOUT ═══ */
-  #about{background:var(--cream2)}
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
-  .about-card{
-    border:1px solid var(--linen);
-    border-radius:var(--radius-lg);
-    padding:3rem;
+ /* ABOUT SECTION REPLACEMENT
+   NOTE:
+   This file is a starter replacement matching the new HTML structure:
+   .about-hero, .hero-overlay, .about-content, .about-stats, .about-social
+*/
+
+/* =========================
+   ABOUT
+========================= */
+
+#about{
+    background:var(--cream2);
+    padding:6rem 0;
+}
+
+.about-hero{
     position:relative;
+    height:620px;
     overflow:hidden;
-    box-shadow:var(--shadow-card);
-}
-.about-card{
-    position:relative;
-    overflow:hidden;
+    border-radius:28px;
+    margin-bottom:60px;
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
 }
 
-.about-card::before{
-    content:'';
-    position:absolute;
-    inset:0;
-
-    background:url('images/pandit-ji5.jpeg') center/cover no-repeat;
-
-    filter:grayscale(100%);
-    opacity:.90;
-
-    z-index:0;
-}
-
-.about-card > *{
-    position:relative;
-    z-index:1;
-}
-  .about-card::after{
-    content:'ॐ';position:absolute;bottom:-15px;right:20px;
-    font-size:6.5rem;color:rgba(232,80,10,0.03);
-    line-height:1;pointer-events:none
-  }
-  .about-slider{
-    position:absolute;
-    inset:0;
-    z-index:0;
-}
-
-.slide{
-    position:absolute;
-    inset:0;
+.about-hero img{
     width:100%;
     height:100%;
     object-fit:cover;
-    opacity:0;
-    transition:opacity 1s ease;
+    transition:.5s;
 }
 
-.slide.active{
-    opacity:1;
+.about-hero:hover img{
+    transform:scale(1.03);
 }
 
-.about-overlay{
+.hero-overlay{
     position:absolute;
     inset:0;
-    background:rgba(255, 255, 255, 0.262);
-    z-index:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:55px;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.78),
+        rgba(0,0,0,.35) 40%,
+        rgba(255,255,255,.08)
+    );
+}
 
+.hero-tag{
+    display:inline-flex;
+    width:max-content;
+    padding:10px 18px;
+    border-radius:999px;
+    background:rgba(255,255,255,.18);
+    color:#2f2f2f;
+    border:1px solid rgba(255,255,255,.35);
+    backdrop-filter:blur(14px);
+    margin-bottom:18px;
+}
+
+.hero-overlay h1{
+    color:#ff8000;
+    font-size:clamp(2.4rem,5vw,4rem);
+    line-height:1.1;
+    margin-bottom:10px;
+    text-shadow:0 4px 18px rgb(255, 255, 255);
+}
+
+.hero-overlay p{
+    color:#945400;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:.9rem;
+    text-shadow:0 2px 10px rgba(0,0,0,.5);
 }
 
 .about-content{
-    position:relative;
-    z-index:2;
-     text-shadow:
-        0 0 8px rgba(255,255,255,0.9),
-        0 0 15px rgba(255,255,255,0.7);
+    max-width:850px;
+    margin:0 auto;
+    text-align:center;
 }
-  .about-name{font-size:clamp(1.8rem,3.5vw,2.4rem);color:var(--brown-deep);font-weight:700;line-height:1.3;margin-bottom:1.5rem}
-  .about-body{color:#2b1a0f;;line-height:1.8;font-size:.98rem;margin-bottom:1.2rem}
-  .about-links{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem}
-  .about-link{
-    display:inline-flex;align-items:center;gap:8px;
-    border:1px solid rgba(232,80,10,.2);
-    border-radius:4px;padding:8px 16px;
-    font-family:var(--font-caps);font-size:.68rem;letter-spacing:1px;
-    color:#1a1a1a  !important;;transition:background .2s, border-color .2s
-  }
-  .about-link:hover{background:rgba(232,80,10,.04);border-color:var(--bhagwa)}
-  .about-features{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
-  .feat-card{
-    background:var(--white);border:1px solid var(--linen);
-    border-radius:var(--radius-sm);padding:1.5rem;
-    box-shadow:var(--shadow-card)
-  }
-  .feat-icon{font-size:1.8rem;margin-bottom:.6rem}
-  .feat-title{color:var(--bhagwa);font-size:.85rem;margin-bottom:.4rem;font-weight:600}
-  .feat-desc{color:var(--brown-muted);font-size:.85rem;line-height:1.6}
+
+.about-content h2{
+    font-size:2.5rem;
+    color:var(--brown-deep);
+    margin-bottom:24px;
+}
+
+.about-content p{
+    color:var(--brown-mid);
+    line-height:2;
+    font-size:1.05rem;
+    margin-bottom:18px;
+}
+
+.about-stats{
+    margin:60px 0;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid rgba(0,0,0,.08);
+    border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.stat-box{
+    padding:32px 20px;
+    text-align:center;
+}
+
+.stat-box:not(:last-child){
+    border-right:1px solid rgba(0,0,0,.08);
+}
+
+.stat-box h3{
+    color:var(--bhagwa);
+    font-size:2.7rem;
+    margin-bottom:8px;
+    font-family:var(--font-display);
+}
+
+.stat-box span{
+    font-size:.82rem;
+    color:var(--brown-muted);
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+/* ===============================
+   PREMIUM SOCIAL BUTTONS
+=================================*/
+
+.about-social{
+
+    margin-top:55px;
+
+    background:#fff;
+
+    border:1px solid rgba(232,80,10,.12);
+
+    border-radius:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.05);
+
+}
+
+.social-btn{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:22px 18px;
+
+    text-decoration:none;
+
+    color:var(--brown-deep);
+
+    transition:.35s;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+}
+
+.social-btn i{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    background:#FFF5ED;
+
+    color:var(--bhagwa);
+
+    transition:.35s;
+
+}
+
+.social-btn:hover{
+
+    background:#FFF8F3;
+
+    color:var(--bhagwa);
+
+}
+
+.social-btn:hover i{
+
+    background:var(--bhagwa);
+
+    color:#fff;
+
+    transform:scale(1.08);
+
+}
+
+.divider{
+
+    width:1px;
+
+    align-self:stretch;
+
+    background:rgba(0,0,0,.08);
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.about-social{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    border-radius:18px;
+
+}
+
+.divider{
+
+    display:none;
+
+}
+
+.social-btn{
+
+    justify-content:flex-start;
+
+    padding:18px;
+
+    border-bottom:1px solid rgba(0,0,0,.06);
+
+}
+
+.social-btn:nth-child(1),
+.social-btn:nth-child(5){
+
+    border-right:1px solid rgba(0,0,0,.06);
+
+}
+
+.social-btn i{
+
+    width:38px;
+
+    height:38px;
+
+    font-size:16px;
+
+}
+
+}
+.about-hero{
+    height:450px;
+}
+
+.hero-overlay{
+    padding:30px;
+}
+
+.about-stats{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.stat-box:nth-child(2){
+    border-right:none;
+}
+
+.stat-box:nth-child(-n+2){
+    border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+}
+
+@media(max-width:600px){
+
+#about{
+    padding:4rem 0;
+}
+
+.about-hero{
+    height:360px;
+    border-radius:22px;
+}
+
+.hero-overlay{
+    padding:22px;
+}
+
+.hero-overlay h1{
+    font-size:2rem;
+}
+
+.hero-overlay p{
+    font-size:.75rem;
+    letter-spacing:2px;
+}
+
+.about-content h2{
+    font-size:2rem;
+}
+
+.about-content p{
+    font-size:.95rem;
+}
+
+.about-stats{
+    grid-template-columns:1fr 1fr;
+}
+
+.stat-box{
+    padding:24px 12px;
+}
+
+.stat-box h3{
+    font-size:2rem;
+}
+
+.about-social{
+    gap:12px;
+}
+
+.about-social a{
+    padding:12px 18px;
+    font-size:.85rem;
+}
+}
+
 
   /* ═══ PUJAS (ALL ORIGINAL PUJAS RESTORED) ═══ */
   #pujas{background:var(--cream)}
@@ -762,54 +1031,106 @@
   <!-- ═══ ABOUT ═══ -->
   <section id="about" class="section-pad">
     <div class="container">
-      <div class="divider"><span>✦</span></div>
-      <div class="about-grid">
-        <article class="about-card about-card-image reveal">
-          
 
-<div class="about-overlay"></div>
+        <!-- Hero Image -->
+        <div class="about-hero">
 
-<div class="about-content">
-          <div class="tag-pill hi-text">✦ पवित्र परम्परा</div>
-          <h2 class="about-name">पंडित समर्थ शर्मा<br><span style="font-size:.6em;color:var(--brown-muted);font-family:var(--font-display);letter-spacing:1px">Pandit Samarth Sharma</span></h2>
+            <img src="images/pandit-ji5.jpeg" alt="Pandit Samarth Sharma">
 
-          <p class="about-body">श्री महाकालेश्वर की पावन नगरी, अवंतिका तीर्थ के एक प्रतिष्ठित परंपरागत वैदिक परिवार में जन्मे पंडित समर्थ शर्मा, पीढ़ियों से चली आ रही अपनी परंपरागत विद्या एवं अपने ज्योतिषीय ज्ञान से देश-विदेश के यजमानों का मार्गदर्शन करते हैं, तथा उज्जैन के पवित्र सिद्ध पीठों व पूजन स्थानों (श्री महाकालेश्वर मंदिर,  मंगलनाथ मंदिर,अंगारेश्वर मंदिर,सिद्धवट एवं रामघाट) आदि पर विधि-विधान से पूजन अनुष्ठान संपन्न कराते हैं।
-          वैदिक अनुष्ठान, दोष निवारण एवं ज्योतिष परामर्श में उनकी गहरी विशेषज्ञता है। अपने गुरु वेदमूर्ति मूर्धन्य विद्वान (स्व. पंडित श्री रमेशचंद्र जी पंड्या) जो कि पंडित जी के नानाजी भी थे द्वारा मिली शिक्षा एवं उनके आशीर्वाद के माध्यम से वे विश्वभर के यजमानों को सही मार्गदर्शन और जीवन में शांति प्रदान कर रहे हैं।</p>
+            <div class="hero-overlay">
 
-          <p class="about-body">Specializing in Vedic Anushthan, Dosh Nivaran, and Kundli Jyotish. He offers caring guidance and traditional solutions to people all over the world.</p>
-          <div class="about-links">
-            <a href="https://www.instagram.com/jyotirvedam" target="_blank" rel="noopener" class="about-link">📷 @jyotirvedam</a>
-            <a href="tel:+919516649547" class="about-link">📞 +91 95166 49547</a>
-            <a href="mailto:hello@jyotirvedam.in" class="about-link">✉️ hello@jyotirvedam.in</a>
-          </div>
-          </div>
-        </article>
-        <div class="about-features reveal">
-          <div class="feat-card">
-            <div class="feat-icon">🕉️</div>
-            <div class="feat-title hi-text">वैदिक परंपरा</div>
-            <div class="feat-desc">Deeply rooted in ancient Vedic scriptures with an authentic family lineage.</div>
-          </div>
-          <div class="feat-card">
-            <div class="feat-icon">📿</div>
-            <div class="feat-title hi-text">उज्जैन की परंपरा</div>
-            <div class="feat-desc">Serving at Holy city Ujjain for generations with devotion.</div>
-          </div>
-          <div class="feat-card">
-            <div class="feat-icon">🌍</div>
-            <div class="feat-title">वैश्विक स्तर पर सेवाएं</div>
-            <div class="feat-desc">Guiding devotees from over all over the world.</div>
-          </div>
-          <div class="feat-card">
-            <div class="feat-icon">✨</div>
-            <div class="feat-title">ज्योतिषीय मार्गदर्शन</div>
-            <div class="feat-desc">Accurate Kundli analysis, planetary Dosh Nivaran, and Vedic pujas under one roof.</div>
-          </div>
+                <span class="hero-tag">
+                    ✦ पंडित परम्परा
+                </span>
+
+                <h1>पंडित समर्थ शर्मा</h1>
+
+                <p>VEDIC ASTROLOGER • RITUAL EXPERT</p>
+
+            </div>
+
         </div>
-      </div>
-      <div class="divider"><span>✦</span></div>
+
+        <!-- About -->
+        <div class="about-content">
+
+            <h2>About Pandit Ji</h2>
+
+            <p>
+                श्री महाकालेश्वर की पावन नगरी उज्जैन में जन्मे
+                पंडित समर्थ शर्मा पीढ़ियों से चली आ रही
+                वैदिक परम्परा के ज्ञाता हैं।
+            </p>
+
+            <p>
+                वे मंगल दोष, कालसर्प दोष, रुद्राभिषेक,
+                महामृत्युंजय जाप तथा अन्य वैदिक अनुष्ठानों
+                में विशेष अनुभव रखते हैं तथा देश-विदेश के
+                श्रद्धालुओं का वर्षों से मार्गदर्शन कर रहे हैं।
+            </p>
+
+        </div>
+
+        <!-- Stats -->
+
+        <div class="about-stats">
+
+            <div class="stat-box">
+                <h3>15+</h3>
+                <span>Years Experience</span>
+            </div>
+
+            <div class="stat-box">
+                <h3>1000+</h3>
+                <span>Pujas Performed</span>
+            </div>
+
+            <div class="stat-box">
+                <h3>250+</h3>
+                <span>Families Blessed</span>
+            </div>
+
+            <div class="stat-box">
+                <h3>10+</h3>
+                <span>Countries Served</span>
+            </div>
+
+        </div>
+
+        <!-- Social -->
+
+      <div class="about-social">
+
+    <a href="tel:+919516649547" class="social-btn">
+        <i class="fa-solid fa-phone"></i>
+        <span>Call</span>
+    </a>
+
+    <span class="divider"></span>
+
+    <a href="https://wa.me/919516649547" class="social-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp</span>
+    </a>
+
+    <span class="divider"></span>
+
+    <a href="https://instagram.com/jyotirvedam" class="social-btn">
+        <i class="fa-brands fa-instagram"></i>
+        <span>Instagram</span>
+    </a>
+
+    <span class="divider"></span>
+
+    <a href="mailto:hello@jyotirvedam.in" class="social-btn">
+        <i class="fa-regular fa-envelope"></i>
+        <span>Email</span>
+    </a>
+
+</div>
+
     </div>
-  </section>
+</section>
 
   <!-- ═══ PUJAS (ALL 9 PUJAS COMING FROM ORIGINAL SOURCE RESTORED) ═══ -->
   <section id="pujas" class="section-pad">
