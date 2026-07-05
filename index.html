@@ -104,7 +104,9 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
     font-feature-settings: "liga" 1, "clig" 1 !important;
   }
 
-  .section-pad{padding:5rem 1.5rem}
+  .section-pad{
+    padding:1.2rem 1.3rem;
+}
   .container{max-width:1140px;margin:0 auto;width:100%}
 
   .tag-pill{
@@ -130,7 +132,10 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
     color:var(--brown-muted);font-size:.95rem;
     line-height:1.7;max-width:540px;margin:0 auto
   }
-  .section-head{text-align:center;margin-bottom:3.5rem}
+  .section-head{
+    text-align:center;
+    margin-bottom:1.5rem;
+}
   .divider{display:flex;align-items:center;gap:14px;margin:2.5rem 0}
   .divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(232,80,10,.2),transparent)}
   .divider span{color:var(--bhagwa);font-size:1.1rem}
@@ -177,22 +182,33 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
     padding:0.4rem 2rem;
     transition:background .3s,box-shadow .3s;
     animation:navSlide .5s ease;
-    background:rgba(253,246,236,.92);
+    background:rgb(78, 35, 0);
     border-bottom:1px solid rgba(232,80,10,.08);
     backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
   }
   #navbar.scrolled{
-    background:rgba(253,246,236,.98);
-    box-shadow:0 4px 20px rgba(58,31,10,.05);
-  }
+    background:rgb(78,35,0);
+    box-shadow:0 4px 20px rgba(0,0,0,.25);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
   .nav-logo img {
   height: 75px;               /* 👈 2. Set this to your desired larger size */
   width: auto;
   object-fit: contain;
 }
   .nav-links{display:flex;align-items:center;gap:2rem}
-  .nav-links a{color:var(--brown-mid);font-family:var(--font-caps);font-size:.7rem;letter-spacing:1.5px;font-weight:600;transition:color .2s}
-  .nav-links a:hover{color:var(--bhagwa)}
+  .nav-links a{
+    color:#ffffff;          /* Green */
+    font-family:var(--font-caps);
+    font-size:.7rem;
+    letter-spacing:1.5px;
+    font-weight:600;
+    transition:color .2s;
+}
+
+.nav-links a:hover{
+    color:#ffae00;          /* Dark green */
+}
   .nav-cta{
     background:var(--bhagwa) !important;
     color:#fff !important;padding:10px 20px !important;
@@ -217,7 +233,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
   #hero{
     position:relative;min-height:95vh;
     display:flex;align-items:center;justify-content:center;
-    overflow:hidden;padding:8rem 1.5rem 4rem;
+    overflow:hidden;padding:8rem 1.5rem 1rem;
     background:linear-gradient(160deg,#fffcf7 0%,#fdf1e2 50%,#f6e6d0 100%)
   }
   .hero-pattern{
@@ -280,7 +296,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
 #about{
     background:var(--cream2);
-    padding:6rem 0;
+    padding:1rem 0;
 }
 
 .about-hero{
@@ -288,7 +304,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
     height:620px;
     overflow:hidden;
     border-radius:28px;
-    margin-bottom:60px;
+    margin-bottom:25px;
     box-shadow:0 20px 60px rgba(0,0,0,.08);
 }
 
@@ -296,6 +312,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
     width:100%;
     height:100%;
     object-fit:cover;
+object-position:center 20%;
     transition:.5s;
 }
 
@@ -349,6 +366,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 .about-content{
     max-width:850px;
     margin:0 auto;
+    padding:0 24px;
     text-align:center;
 }
 
@@ -366,7 +384,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 }
 
 .about-stats{
-    margin:60px 0;
+    margin:30px 0 20px;
     display:grid;
     grid-template-columns:repeat(4,1fr);
     border-top:1px solid rgba(0,0,0,.08);
@@ -374,7 +392,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 }
 
 .stat-box{
-    padding:32px 20px;
+    padding:12px 10px;
     text-align:center;
 }
 
@@ -434,7 +452,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
     gap:12px;
 
-    padding:22px 18px;
+    padding:12px 18px;
 
     text-decoration:none;
 
@@ -568,12 +586,11 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
     border-bottom:1px solid rgba(0,0,0,.08);
 }
 
-}
 
 @media(max-width:600px){
 
 #about{
-    padding:4rem 0;
+    padding:2rem 0;
 }
 
 .about-hero{
@@ -607,7 +624,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 }
 
 .stat-box{
-    padding:24px 12px;
+    padding:12px 8px;
 }
 
 .stat-box h3{
@@ -615,11 +632,13 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 }
 
 .about-social{
-    gap:12px;
+    margin-top:20px;
+    margin-bottom:0;
+     gap:12px;
 }
 
 .about-social a{
-    padding:12px 18px;
+    padding:8px 12px;
     font-size:.85rem;
 }
 }
@@ -660,11 +679,16 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
   .astro-link{color:var(--bhagwa);font-family:var(--font-caps);font-size:.68rem;letter-spacing:1px;font-weight:600}
 
   /* ═══ GALLERY (PREMIUM DESIGN WITH SAMPLE IMAGES) ═══ */
-  #gallery{background:var(--cream);overflow:hidden}
+
+  #gallery{
+    background:var(--cream);
+    overflow:hidden;
+    padding-bottom:.5rem;
+}
   .gallery-scroll-wrap{
     position:relative;
     overflow-x:auto;
-    padding:1rem 0;
+    padding:.3rem 0;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -692,17 +716,26 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
     transition:transform .4s ease
   }
   .gallery-item:hover img{transform:scale(1.04)}
-  .gallery-item-overlay{  
-    position:absolute;inset:0;
+  .gallery-item-overlay{
+    position:absolute;
+    inset:0;
     background:linear-gradient(to top,rgba(58,31,10,.75),transparent 60%);
-    display:flex;align-items:flex-end;
+    display:flex;
+    align-items:flex-end;
     padding:1rem;
-  }
+    pointer-events:none;
+}
   .gallery-item-label{
     color:#fff;font-family:var(--font-caps);
     font-size:.7rem;letter-spacing:1px
   }
-  .gallery-nav{display:flex;justify-content:center;align-items:center;gap:1rem;margin-top:2rem}
+  .gallery-nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:.8rem;
+    margin:.6rem 0;
+}
   .gallery-btn{
     width:44px;height:44px;border-radius:50%;
     border:1.5px solid rgba(232,80,10,.25);
@@ -714,7 +747,10 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
   .gallery-btn:hover{background:var(--bhagwa);color:#fff;border-color:var(--bhagwa)}
 
   /* ═══ DARSHAN (ALL TOUR PLACES RESTORED) ═══ */
-  #darshan{background:linear-gradient(180deg,var(--cream2),var(--parchment))}
+ #darshan{
+    background:linear-gradient(180deg,var(--cream2),var(--parchment));
+    padding-top:1rem;
+}
   .darshan-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.5rem}
   .darshan-card{
     background:var(--white);
@@ -728,7 +764,10 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
   .darshan-icon{font-size:1.8rem;margin-bottom:.8rem}
   .darshan-name{font-family:var(--font-display);color:var(--brown-deep);font-size:1.15rem;font-weight:700;margin-bottom:.5rem;line-height:1.3}
   .darshan-desc{color:var(--brown-muted);font-size:.85rem;line-height:1.6}
-  .darshan-cta-wrap{text-align:center;margin-top:3rem}
+  .darshan-cta-wrap{
+    text-align:center;
+    margin-top:1.5rem;
+}
 
   /* ═══ TESTIMONIALS (ALL ORIGINAL REVIEWS RESTORED) ═══ */
   #testimonials{background:var(--cream);overflow:hidden}
@@ -772,24 +811,174 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
   .faq-content{max-height:0;opacity:0;transition:max-height .3s ease,opacity .3s ease;color:var(--brown-muted);font-size:.95rem;line-height:1.65;padding:0 1.4rem}
   .faq-item.active .faq-content{max-height:200px;opacity:1;padding:0 1.4rem 1.4rem}
 
+  /* ═══ ABOUT SEO ═══ */
+
+#about-jyotirvedam-seo{
+    background:linear-gradient(180deg,#fdf6ec,#f8efe3);
+    padding:70px 20px;
+}
+
+#about-jyotirvedam-seo .section-head{
+    margin-bottom:35px;
+}
+
+.about-card{
+    max-width:900px;
+    margin:0 auto;
+    background:#fffdf8;
+    border:1px solid rgba(232,80,10,.08);
+    border-radius:22px;
+    padding:45px;
+    box-shadow:0 10px 35px rgba(0,0,0,.05);
+}
+
+.about-body{
+    color:var(--brown-mid);
+    font-size:1.05rem;
+    line-height:2;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.about-body:last-child{
+    margin-bottom:0;
+}
+
+@media(max-width:768px){
+
+.about-card{
+    padding:28px 22px;
+}
+
+.about-body{
+    font-size:.96rem;
+    line-height:1.9;
+}
+
+}
   /* ═══ CONTACT ═══ */
-  #contact{background:var(--parchment)}
+  #contact{
+    background:linear-gradient(180deg,#f8efe3,#f5e8d4);
+    padding:60px 20px;
+}
   .contact-inner{max-width:720px;margin:0 auto;text-align:center}
-  .contact-body{color:var(--brown-mid);line-height:1.8;margin-bottom:2.5rem;font-size:1rem}
-  .contact-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-  .contact-info{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-top:3rem;padding-top:2.5rem;border-top:1px solid var(--linen)}
-  .info-item{text-align:center}
-  .info-label{font-family:var(--font-caps);font-size:.6rem;letter-spacing:1.5px;color:var(--brown-dim);margin-bottom:6px;text-transform:uppercase}
+  .contact-body{
+    max-width:720px;
+    margin:0 auto 35px;
+    color:var(--brown-mid);
+    line-height:1.9;
+    font-size:1.05rem;
+}
+  .contact-btns{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-bottom:45px;
+}
+  .contact-info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:18px;
+    margin-top:10px;
+}
+  .info-item{
+    background:#fff;
+    border:1px solid rgba(232,80,10,.08);
+    border-radius:18px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.04);
+    transition:.3s;
+}
+
+.info-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+  .info-label{
+    font-family:var(--font-caps);
+    font-size:.7rem;
+    letter-spacing:1.5px;
+    color:#6b3b14;   /* darker brown */
+    font-weight:700;
+    margin-bottom:8px;
+    text-transform:uppercase;
+}
   .info-val{color:var(--bhagwa);font-size:1rem;font-weight:600}
 
   /* ═══ FOOTER ═══ */
-  footer{
-    border-top:1px solid var(--linen);padding:3rem 1.5rem;
-    text-align:center;background:var(--brown-deep)
-  }
-  .footer-logo{font-size:1.2rem;color:var(--marigold);margin-bottom:.8rem;font-weight:600}
-  .footer-addr{color:rgba(232,196,140,.6);font-size:.8rem;font-family:var(--font-caps);letter-spacing:1px}
-  .footer-mantra{color:rgba(232,196,140,.4);font-size:.95rem;margin-top:1rem;}
+ footer{
+    background:#4b2308;
+    color:#f7e8cf;
+    text-align:center;
+    padding:40px 20px 22px;
+}
+
+.footer-logo{
+    font-size:2rem;
+    color:#ffb545;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.footer-tagline{
+    color:#d9b88d;
+    font-size:15px;
+    margin-bottom:25px;
+}
+
+.footer-contact{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+    margin-bottom:22px;
+    font-size:15px;
+}
+
+.footer-contact span{
+    color:#f6d7aa;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:28px;
+    flex-wrap:wrap;
+    margin-bottom:18px;
+}
+
+.footer-links a{
+    color:#f7e8cf;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#ffb545;
+}
+
+.footer-copy{
+    font-size:13px;
+    color:#b89369;
+    border-top:1px solid rgba(255,255,255,.08);
+    padding-top:15px;
+}
+
+@media(max-width:768px){
+
+.footer-contact{
+    flex-direction:column;
+    gap:10px;
+}
+
+.footer-links{
+    gap:18px;
+}
+
+}
 
   /* ═══ FLOATING WA ═══ */
   #float-wa{
@@ -811,7 +1000,9 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
     #navbar{padding:1rem 1.5rem}
   }
   @media(max-width:600px){
-    .section-pad{padding:4rem 1rem}
+    .section-pad{
+    padding:.8rem 1rem;
+}
     .hero-tagline-hi{font-size:2rem}
     .hero-btns{gap:1rem}
     .btn-bhagwa,.btn-outline,.btn-wa{padding:12px 24px;font-size:.7rem}
@@ -854,10 +1045,12 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
 .modal-content img{
   width:100%;
-  height:250px;
-  object-fit:cover;
+  max-height:500px;
+  height:auto;
+  object-fit:contain;
   border-radius:12px;
   margin-bottom:20px;
+  background:#f8f5ef;
 }
 
 #modalTitle{
@@ -937,6 +1130,61 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 .hero-content{
     position:relative;
     z-index:3;
+}
+.gallery-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.92);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:99999;
+    padding:20px;
+}
+
+.gallery-modal.show{
+    display:flex;
+}
+
+.gallery-modal img{
+    max-width:92%;
+    max-height:75vh;
+    border-radius:14px;
+    box-shadow:0 10px 40px rgba(0,0,0,.4);
+}
+
+.gallery-close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:#fff;
+    font-size:38px;
+    cursor:pointer;
+}
+
+.gallery-actions{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.gallery-action{
+    background:#e8500a;
+    color:#fff;
+    border:none;
+    padding:12px 24px;
+    border-radius:30px;
+    cursor:pointer;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:600;
+}
+
+.gallery-action:hover{
+    background:#c44008;
 }
   </style>
   </head>
@@ -1039,9 +1287,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
             <div class="hero-overlay">
 
-                <span class="hero-tag">
-                    ✦ पंडित परम्परा
-                </span>
+              
 
                 <h1>पंडित समर्थ शर्मा</h1>
 
@@ -1057,16 +1303,11 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
             <h2>About Pandit Ji</h2>
 
             <p>
-                श्री महाकालेश्वर की पावन नगरी उज्जैन में जन्मे
-                पंडित समर्थ शर्मा पीढ़ियों से चली आ रही
-                वैदिक परम्परा के ज्ञाता हैं।
+                ​पं. समर्थ शर्मा अवंतिका तीर्थ (उज्जैन) के प्रतिष्ठित वैदिक कुल परम्परा के संवाहक हैं।वैदिक अनुष्ठानों, दोष निवारण व ज्योतिषीय मार्गदर्शन में पारंगत पंडित जी उज्जैन के प्रमुख सिद्ध पीठों (श्री महाकालेश्वर, मंगलनाथ, अंगारेश्वर, सिद्धवट व रामघाट) पर देव-आराधना कराने के साथ ही, देश-विदेश में यजमानों के निवास, व्यावसायिक प्रतिष्ठान व अन्य तीर्थ स्थलों पर विशिष्ट अनुष्ठान संपन्न कर प्रामाणिक मार्गदर्शन प्रदान कर रहे हैं।
             </p>
 
             <p>
-                वे मंगल दोष, कालसर्प दोष, रुद्राभिषेक,
-                महामृत्युंजय जाप तथा अन्य वैदिक अनुष्ठानों
-                में विशेष अनुभव रखते हैं तथा देश-विदेश के
-                श्रद्धालुओं का वर्षों से मार्गदर्शन कर रहे हैं।
+               ​उन्हें यह पारंपरिक वैदिक ज्ञान अपने पिता पं. राजेश शर्मा जी के संस्कारों, गुरु व नानाजी वेदमूर्ति स्व. पं. श्री रमेशचंद्र जी पंड्या एवं गुरु पं. मितेश पांडे जी के दिव्य सानिध्य में आत्मसात हुआ है।
             </p>
 
         </div>
@@ -1464,7 +1705,19 @@ onclick="openPujaModal(
           <div class="gallery-item-overlay"><span class="gallery-item-label"></span></div>
         </div>
         <div class="gallery-item">
-          <img src="/images/pandit-ji6.jpeg" alt="Pandit Samarth Sharma"/>
+          <img src="/images/image1.jpeg" alt="Pandit Samarth Sharma"/>
+          <div class="gallery-item-overlay"><span class="gallery-item-label"></span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="/images/image2.jpeg" alt="Pandit Samarth Sharma"/>
+          <div class="gallery-item-overlay"><span class="gallery-item-label"></span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="/images/image3.jpeg" alt="Pandit Samarth Sharma"/>
+          <div class="gallery-item-overlay"><span class="gallery-item-label"></span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="/images/image4.jpeg" alt="Pandit Samarth Sharma"/>
           <div class="gallery-item-overlay"><span class="gallery-item-label"></span></div>
         </div>
       </div>
@@ -1603,15 +1856,26 @@ onclick="openPujaModal(
 
     <div class="about-card reveal">
 
-      <p class="about-body=">
-        Jyotirvedam is a trusted platform for authentic Vedic Puja, Dosh Nivaran, and Astrology Services in Ujjain. Led by Pandit Samarth Sharma, we specialize in Mangal Dosh Nivaran, Kaal Sarp Dosh Shanti, Pitra Dosh Nivaran, Rudrabhishek, Mahamrityunjaya Jaap, Navgraha Shanti, Grah Vastu Shanti, and Vedic Astrology Consultation.
-      </p>
+    <p class="about-body">
+        Jyotirvedam is a trusted platform for authentic
+        <strong>Vedic Puja, Dosh Nivaran and Astrology Services</strong>
+        in Ujjain. Led by <strong>Pandit Samarth Sharma</strong>,
+        we specialize in Mangal Dosh Nivaran, Kaal Sarp Dosh Shanti,
+        Pitra Dosh Nivaran, Rudrabhishek, Mahamrityunjaya Jaap,
+        Navgraha Shanti, Grah Vastu Shanti and Vedic Astrology Consultation.
+    </p>
 
-      <p class="about-body">
-        All rituals are performed according to traditional Vedic procedures at sacred places including Mangalnath Temple, Mahakaleshwar Temple, Siddhavat, and other holy sites of Ujjain. We also provide online puja services, Kundli analysis, Kundli Milan, and spiritual guidance for devotees across India and worldwide.
-      </p>
+    <p class="about-body">
+        Every ritual is performed according to authentic Vedic traditions
+        at sacred locations including
+        <strong>Mangalnath Temple, Mahakaleshwar Temple,
+        Siddhavat and Ram Ghat</strong>.
+        We also provide Online Puja, Kundli Analysis,
+        Kundli Milan and spiritual guidance for devotees
+        across India and worldwide.
+    </p>
 
-    </div>
+</div>
 
   </div>
 </section>
@@ -1619,7 +1883,7 @@ onclick="openPujaModal(
   <!-- ═══ CONTACT ═══ -->
   <section id="contact" class="section-pad">
     <div class="container">
-      <div class="divider"><span>✦</span></div>
+      
       <div class="contact-inner reveal">
         <div class="tag-pill hi-text">संपर्क करें</div>
         <h2 class="section-title">अपनी आध्यात्मिक यात्रा प्रारंभ करें</h2>
@@ -1639,15 +1903,37 @@ onclick="openPujaModal(
           <div class="info-item"><div class="info-label">Services</div><div class="info-val">In-person &amp; Online</div></div>
         </div>
       </div>
-      <div class="divider"><span>✦</span></div>
+      
     </div>
   </section>
 
-  <footer>
-    <div class="footer-logo">✦ Jyotirvedam ✦</div>
-    <p class="footer-addr">Mangalnath Mandir, Ujjain, Madhya Pradesh · +91 95166 49547</p>
-    <p class="footer-mantra">ॐ नमः शिवाय &nbsp;·&nbsp; जय महाकाल</p>
-  </footer>
+ <footer>
+
+<div class="footer-logo">✦ Jyotirvedam ✦</div>
+
+<p class="footer-tagline">
+Authentic Vedic Puja & Astrology Services
+</p>
+
+<div class="footer-contact">
+<span>📍 Ujjain</span>
+<span>📞 +91 95166 49547</span>
+<span>✉ hello@jyotirvedam.in</span>
+<span>📷 @jyotirvedam</span>
+</div>
+
+<div class="footer-links">
+<a href="#about">About</a>
+<a href="#pujas">Pujas</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</div>
+
+<div class="footer-copy">
+© 2026 Jyotirvedam • ॐ नमः शिवाय
+</div>
+
+</footer>
 
   <!-- Floating WhatsApp -->
   <a id="float-wa" href="https://wa.me/919516649547?text=Namaste%20Pandit%20Ji%20%F0%9F%99%8F%20I%27d%20like%20to%20enquire%20about%20your%20Vedic%20services." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
@@ -1739,25 +2025,95 @@ window.onclick = function(event){
 </script>
 <script>
 const slides = document.querySelectorAll('.slide');
-let current = 0;
 
-setInterval(() => {
-  slides[current].classList.remove('active');
-  current = (current + 1) % slides.length;
-  slides[current].classList.add('active');
-}, 3000);
+if (slides.length > 0) {
+    let current = 0;
+
+    setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+    }, 3000);
+}
 </script>
 <script>
 const heroSlides = document.querySelectorAll('.hero-slide');
-let heroIndex = 0;
 
-setInterval(() => {
-    heroSlides[heroIndex].classList.remove('active');
+if (heroSlides.length > 1) {
+    let heroIndex = 0;
 
-    heroIndex = (heroIndex + 1) % heroSlides.length;
+    setInterval(() => {
+        heroSlides[heroIndex].classList.remove('active');
 
-    heroSlides[heroIndex].classList.add('active');
-}, 4000);
+        heroIndex = (heroIndex + 1) % heroSlides.length;
+
+        heroSlides[heroIndex].classList.add('active');
+    }, 4000);
+}
 </script>
-  </body>
-  </html>
+<div id="galleryModal" class="gallery-modal">
+    <span class="gallery-close">&times;</span>
+
+    <img id="galleryModalImg" src="" alt="Gallery Image">
+
+    <div class="gallery-actions">
+        <a id="downloadBtn" download class="gallery-action">
+            <i class="fa-solid fa-download"></i>
+            Download
+        </a>
+
+        <button id="shareBtn" class="gallery-action">
+            <i class="fa-solid fa-share-nodes"></i>
+            Share
+        </button>
+    </div>
+</div>
+
+<script>
+const galleryItems = document.querySelectorAll(".gallery-item");
+
+galleryItems.forEach(card => {
+
+    const img = card.querySelector("img");
+
+    card.style.cursor = "pointer";
+
+    card.addEventListener("click", () => {
+
+        galleryModal.classList.add("show");
+        galleryModalImg.src = img.src;
+        downloadBtn.href = img.src;
+
+    });
+
+});
+
+document.querySelector(".gallery-close").onclick = () => {
+    galleryModal.classList.remove("show");
+};
+
+galleryModal.onclick = (e) => {
+    if (e.target === galleryModal) {
+        galleryModal.classList.remove("show");
+    }
+};
+
+shareBtn.onclick = async () => {
+    const url = galleryModalImg.src;
+
+    if (navigator.share) {
+        navigator.share({
+            title: "Jyotirvedam Gallery",
+            text: "Sacred moments from Jyotirvedam",
+            url: url
+        });
+    } else {
+        await navigator.clipboard.writeText(url);
+        alert("Image link copied.");
+    }
+};
+</script>
+
+</body>
+</html>
+ 
